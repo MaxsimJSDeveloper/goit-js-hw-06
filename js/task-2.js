@@ -1,10 +1,10 @@
 'use strict';
 
 class Storage {
-  #items;
+  #items = [];
 
   constructor(items) {
-    this.#items = items;
+    this.#items = [...items];
   }
 
   getItems() {
@@ -17,7 +17,6 @@ class Storage {
 
   removeItem(itemToRemove) {
     this.#items = this.#items.filter(element => element !== itemToRemove);
-    return this.#items;
   }
 }
 
